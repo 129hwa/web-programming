@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>중간고사 2번</title>
+        <style>
+            form{
+                position: fixed;
+                background-position: center;
+                
+            }
+            legend{
+                font-size: 200%;
+                font-weight: 700;
+            }
+            #alert{
+                background-color: cyan;
+                font-size: 300%;
+                color: red;
+                text-align: center;
+            }
+            div {
+                display: inline-block;
+            }
+            input[type=checkbox]:hover{
+                transform: scale(300%, 300%);
+            }
+            #alert:hover{  
+                background-color: yellow;
+            }
+            #reset{
+                background-color: lightcoral;
+                float: both;
+            }
+            #enter, #cancer{
+                float: right;
+
+            }
+
+        </style>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>알람 설정</legend>
+                <br>
+                <input id="alert" type="time" value="06:00">
+                <br>
+                <br>
+                    <label><div><input type="checkbox" value="1"><p>일</p></div></label>
+                    <label><div><input type="checkbox" value="2" checked><p>월</p></div></label>
+                    <label><div><input type="checkbox" value="3" checked><p>화</p></div></label>
+                    <label><div><input type="checkbox" value="4" checked><p>수</p></div></label>
+                    <label><div><input type="checkbox" value="5" checked><p>목</p></div></label>
+                    <label><div><input type="checkbox" value="6" checked><p>금</p></div></label>
+                    <label><div><input type="checkbox" value="7"><p>토</p></div></label>
+                <br>
+                알람 사운드
+                <select name="sound">
+                    <option value="1" selected>Bell</option>
+                    <option value="2">Ding Dong</option>
+                    <option value="3">Beep</option>
+                </select>
+                <br>
+                <br>
+                음량 0 <input type="range" min="0" max="15"> 15
+                
+            </fieldset>
+            <br>
+            <input type="reset" id="reset" value="초기화">
+            <input type="submit" id="cancer" value="취소">
+            <input type="submit" id="enter" value="등록">
+            
+        </form>
+    </body>
+</html>

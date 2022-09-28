@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <style>
+            body{
+                text-align: center;
+            }
+            section{
+                display: inline-block;
+            }
+            table {
+                display: inline-block;
+                border: 1px blue;
+                width: 640px;
+                border-collapse: collapse;
+            }
+            thead{
+                text-align: center;
+            }
+            td{
+                border: 2px red;
+                height: 200px;
+            }
+            img{
+                width: 200px;
+
+                border-radius: 10px;
+            }
+            div{
+                background-color: lemonchiffon;
+                padding: 20px;
+                width: 200px;
+                height: 300px;
+            }
+            div:hover{
+                background-color: skyblue;
+            }
+            img:hover, p:hover{
+                transform: scale(150%,150%) rotate(-15deg) ;
+                box-shadow: 10px 10px 5px  gray;
+            }
+
+        </style>
+    </head>
+    <body>
+        <section>
+        <table>
+            <thead>
+                <tr><th><h3>아트 링크</h3></th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div>
+                        <img src="media/starry night.jpg">
+                        <a href="media/starry night.jpg" target="frame1"><p>별이 빛나는 밤</p></a>
+                        
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                        <img src="media/waterlilies.jpg">
+                        <a href="media/waterlilies.jpg" target="frame1"><p>수련</p></a>
+                        
+                    </div>
+                </td>
+                    <td>
+                        <div>
+                            <img src="media/minari.jpg">
+                            <a href="https://www.youtube.com/embed/lPYxbbKYYmE" target="frame1"><p>미나리</p></a>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <img src="media/hufs logo.jpg">
+                            <a href="https://www.hufs.ac.kr/" target="frame1"><p>한국외국어대학교</p></a>
+                            
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <iframe name="frame1"; width="640px"; height="480px">
+
+        </iframe>
+    </section>
+    </body>
+</html>

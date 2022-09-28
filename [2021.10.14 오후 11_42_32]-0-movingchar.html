@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<meta charset="UTF-8">-->
+        <title>움직이는 글자</title>
+        <style>
+            div {
+                display: inline-block;
+                margin: 5px;
+                border-radius: 50px;
+                color: white;
+                font-weight: 600;
+                text-align: center;
+                padding: 5px;
+                padding-left: 1%;
+                padding-right: 1%;
+                transition: transform 1s;
+            }
+            @keyframes goright{
+                0% { left: 0%; }
+                50% {
+                    box-sizing: 400%;
+                    font-size: 400%;
+                    left: 50%;
+                    padding-left: 3%;
+                    padding-right: 3%;
+                }
+                100%{ left: 0%; }
+            }
+            @keyframes goleft{
+                0% { right: 0%; }
+                50%{
+                    box-sizing: 400%;
+                    font-size: 400%;
+                    right: 50%;
+                    padding-left: 3%;
+                    padding-right: 3%;
+                }
+                100% { right: 0%; }
+            }
+            @keyframes godown{
+                0% { top: 0% }
+                50% {
+                    box-sizing: 400%;
+                    font-size: 400%;
+                    top: 45%;
+                    padding-left: 3%;
+                    padding-right: 3%;
+                }
+                100% { top: 0%}
+            }
+            @keyframes goup{
+                0% { bottom: 0% }
+                50% {
+                    box-sizing: 400%;
+                    font-size: 400%;
+                    bottom: 45%;
+                    padding-left: 3%;
+                    padding-right: 3%;
+                }
+                100% { bottom: 0%}
+            }
+            div#www{
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                background-color: black;
+                animation-name: goright;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+                
+            }
+            div#html {
+                position: fixed;
+                background-color: red;
+                top: 0px;
+                right: 0px;
+                animation-name: godown;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+            }
+            div#css {
+                position: fixed;
+                bottom: 0px;
+                right: 0px;
+                background-color: green;
+                animation-name: goleft;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+            }
+            div#javascript {
+                position: fixed;
+                background-color: blue;
+                bottom: 0px;
+                left: 0px;
+                animation-name: goup;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+            }
+            div:hover { transform: rotate(180deg); }
+        </style>
+    </head>
+    <body>
+        <div id="www">WWW</div>
+        <div id="html">HTML5</div>
+        <div id="javascript">JavaScript</div>
+        <div id="css">CSS3</div>
+    </body>
+</html>

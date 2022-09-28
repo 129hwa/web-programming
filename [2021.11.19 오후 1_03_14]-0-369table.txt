@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            table
+            {
+                border: solid 3px;
+                text-align: center;
+                width: 500px;
+                border-collapse: collapse;
+            }
+            
+            table td
+            {   
+                border: solid 1px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <table id="table369">
+        <?php
+            function check($num){
+                $t1 = floor($num/100);
+                $t2 = floor(($num-$t1*100)/10);
+                $t3 = $num%10;
+                 if(($t1+$t2+$t3)%3 == 0){
+                    return 0;
+                }
+                else if(($t1!=0 && $t1%3==0) || ($t2!=0 && $t2%3==0) || ($t3!=0 && $t3%3==0)){
+                    return 1;
+                }
+                else{
+                    return 2;
+                }
+            }
+            
+            echo "<tr>";
+            for($col=0; $col <= 990;)
+            {
+                for($row=0; $row <= 9; $row += 1)
+                {
+                    $sum = $col + $row;
+                    $tmp = check($sum);
+                    $back_color = array(0 => "cyan", 1 => "yellow", 2 => "white");
+                    $font_color = array(0 => "red", 1 => "blue", 2 => "black");
+                    $font_weight = array(0 => 600, 1 => 600, 2 => 500);
+                    echo "<td style='background-color:$back_color[$tmp]; color:$font_color[$tmp]; font-weight:$font_weight[$tmp]; border-color: black'>{$sum}</td>";
+                    
+                }
+                $col += 10;
+                echo "</tr>";
+            }
+            echo "</tr>";
+            
+        ?>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>비만도 판정</title>
+        <style>
+            th{
+                text-align: center;
+            }
+            #fat{
+                font-size: 200%;
+            }
+        </style>
+    </head>
+    <body>
+        <table border="1">
+            <tr>
+                <tr><th>이름</th><td id="name"></td></tr>
+                <tr><th>키</th><td id="height"></td></tr>
+                <tr><th>몸무게</th><td id="weight"></td></tr>
+                <tr><th>BMI</th><td id="BMI"></td></tr>
+                <tr><th>비만도</th><td id="fat"></td></tr>
+            </tr>
+        </table>
+        <script type="text/javascript">
+
+            var n = prompt("이름을 입력하세요...");
+            document.getElementById("name").innerText = n;
+            
+            var h = prompt(n+"님의 키를 입력하세요...");
+            document.getElementById("height").innerText = h + "cm";
+
+            var w = prompt(n+"님의 몸무게를 입력하세요...");
+            document.getElementById("weight").innerText = w + "kg";
+            
+            var bmi = eval(w/(h*0.0001*h));
+            document.getElementById("BMI").innerText = bmi.toFixed(1);
+            
+            var f = document.getElementById("fat");
+            if (bmi < 18.5)
+                {f.innerText = "저체중";
+                f.style.color = "blue";}
+            else if (bmi >= 18.5 && bmi < 25.0)
+                f.innerText = "정상";
+            else if (bmi >= 25.0 && bmi <30.0)
+                {f.innerText = "과체중";
+                f.style.color = "orange";}
+            else if (bmi >= 30.0)
+                {f.innerText = "비만";
+                f.style.color = "red";}
+
+        </script>
+    </body>
+</html>

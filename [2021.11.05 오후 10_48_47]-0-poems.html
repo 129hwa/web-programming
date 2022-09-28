@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>윤동주 시집</title>
+        <style>
+            body
+            {
+                width: 100%;
+            }
+            #box1, #box2, #box3
+            {
+                display: inline-block;
+                background-color: yellow;
+                border-radius: 10px;
+                text-align: center;
+                padding: 10px;
+                width: 150px;
+                margin: 5px;
+            }
+            #poem1, #poem2, #poem3
+            {
+                visibility: collapse;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box1" onclick="Show('box1', 'poem1');">
+            서시<br>윤동주
+        </div>
+        <div id="box2" onclick="Show('box2', 'poem2');">
+            쉽게 쓰여진 시<br>윤동주
+        </div>
+        <div id="box3" onclick="Show('box3', 'poem3');">
+            별 헤는 밤<br>윤동주
+        </div>
+        
+        <table id="poem1">
+            <td><h3>서시, 윤동주</h3></td>
+            <tr><td>죽는 날까지 하늘을 우러러<br>
+            한 점 부끄럼이 없기를,<br>
+            잎새에 이는 바람에도<br>
+            나는 괴로워했다.<br>
+            별을 노래하는 마음으로<br>
+            모든 죽어가는 것을 사랑해야지.<br>
+            그리고 나한테 주어진 길을<br>
+            걸어가야겠다.</td></tr>
+        </table>
+        <table id="poem2">
+            <td><h3>쉽게 쓰여진 시, 윤동주</h3></td>
+            <tr><td>
+            인생은 살기 어렵다는데<br>
+            시가 이렇게 쉽게 씌어지는 것은<br>
+            부끄러운 일이다<br>
+            육첩방은 남의 나라<br>
+            창밖에 밤비가 속살거리는데,<br>
+            등불을 밝혀 어둠을 조금 내몰고<br>
+            시대처럼 올 아침을 기다리는 최후의 나.
+            </td></tr>
+        </table>
+        <table id="poem3">
+            <td><h3>별 헤는 밤, 윤동주</h3></td>
+            <tr><td>계절로 지나가는 하늘에는<br>
+            가을로 가득 차 있습니다.<br>
+            나는 아무 걱정도 없이<br>
+            가을 속의 별들을 다 헤일 듯 합니다.<br>
+            가슴속에 하나 둘 새겨지는 별을<br>
+            이제 다 못 헤는 것은<br>
+            쉬이 아침이 오는 까닭이요,<br>
+            내일 밤이 남은 까닭이요,<br>
+            아직 나의 청춘이 다 하지 않은 까닭입니다.
+            </td></tr>
+        </table>
+        
+        <script type="text/javascript">
+            document.getElementById("poem1").onclick = Show('box1', 'poem1');
+            document.getElementById("poem2").onclick = Show('box2', 'poem2');
+            document.getElementById("poem3").onclick = Show('box3', 'poem3');
+
+            function Show(box, poem)
+            {
+                var box = document.getElementById(box);
+                var poem = document.getElementById(poem);
+                if(poem.style.visibility == "collapse")
+                    {box.style.background = "cyan";
+                    poem.style.visibility = "visible";}
+                else
+                    {box.style.background = "yellow";
+                    poem.style.visibility = "collapse";}
+            }
+        </script>
+    </body>
+</html>
