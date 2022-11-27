@@ -1,3 +1,3 @@
-# web-programming
+# web_programming
 
-강의 실습
+1. 2021 강의 실습
